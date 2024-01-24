@@ -1,0 +1,214 @@
+.fragment-07 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fragment-07 > section {
+  width: 100%;
+  display: flex;
+}
+
+.fragment-07-mainSection {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fragment-07-mainSection > section {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+/*SECTION 1 */
+.fragment-07-mainSection > :nth-child(1) {
+  width: 30%;
+  align-self: start;
+  padding-left: 12%;
+  flex-direction: column;
+}
+
+.fragment-07-mainSection > :nth-child(1) > section {
+  display: flex;
+  justify-content: space-between;
+}
+.fragment-07-mainSection > :nth-child(1) > section p {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/*SECTION  (Hotel)2 */
+.fragment-07-mainSection > :nth-child(2) {
+  padding-top: 10px;
+}
+
+.fragment-07-mainSection > :nth-child(2) > :first-child {
+  display: flex;
+  align-items: end;
+  width: 40%;
+}
+.fragment-07-mainSection > :nth-child(2) > :first-child img {
+  width: 80%;
+}
+
+/* section 2 (Hotel) right section*/
+.fragment-07-mainSection > :nth-child(2) > :last-child {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fragment-07-mainSection > :nth-child(2) > :last-child > section {
+  display: flex;
+  width: 100%;
+}
+.fragment-07-mainSection > :nth-child(2) > :last-child > section p {
+  width: 50%;
+}
+.fragment-07-mainSection > :nth-child(2) > :last-child > section p:first-child {
+  width: 40%;
+  font-weight: bold;
+}
+.fragment-07-mainSection > :nth-child(2) > :last-child > section p:last-child {
+  width: 40%;
+  text-align: start;
+}
+
+/*SECTION  (Vehicle)3 */
+.fragment-07-mainSection > :nth-child(3) {
+  padding-top: 70px;
+  width: 80%;
+  position: relative;
+}
+
+.fragment-07-mainSection > :nth-child(3)::before {
+  content: "";
+  width: 70%;
+  top: 35px;
+  position: absolute;
+  height: 2px;
+  background-color: #0a58ca;
+  z-index: 10;
+}
+
+.fragment-07-mainSection > :nth-child(3) > :first-child {
+  display: flex;
+  align-items: end;
+  width: 40%;
+}
+.fragment-07-mainSection > :nth-child(3) > :first-child img {
+  width: 80%;
+}
+
+/* section 3 (Vehicle) right section*/
+.fragment-07-mainSection > :nth-child(3) > :last-child {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fragment-07-mainSection > :nth-child(3) > :last-child > section {
+  display: flex;
+  width: 100%;
+}
+.fragment-07-mainSection > :nth-child(3) > :last-child > section p {
+  width: 50%;
+}
+.fragment-07-mainSection > :nth-child(3) > :last-child > section p:first-child {
+  width: 40%;
+  font-weight: bold;
+}
+.fragment-07-mainSection > :nth-child(3) > :last-child > section p:last-child {
+  width: 40%;
+  text-align: start;
+}
+
+/*SECTION  (Paid Section)4 */
+.fragment-07-mainSection > :nth-child(4) {
+  padding-top: 70px;
+  width: 80%;
+  position: relative;
+}
+
+.fragment-07-mainSection > :nth-child(4)::before {
+  content: "";
+  width: 70%;
+  top: 35px;
+  position: absolute;
+  height: 2px;
+  background-color: #0a58ca;
+  z-index: 10;
+}
+
+.fragment-07-mainSection > :nth-child(4) > section {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.fragment-07-mainSection > :nth-child(4) > section section:first-child > p {
+  font-size: 1em;
+  font-weight: bold;
+  color: #0b5ed7;
+}
+.fragment-07-mainSection > :nth-child(4) > section section {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.fragment-07-mainSection > :nth-child(4) > section section p:first-child {
+  width: 50%;
+  font-weight: bold;
+}
+.fragment-07-mainSection > :nth-child(4) > section section p:nth-child(2) {
+  width: 20%;
+  text-align: start;
+}
+.fragment-07-mainSection > :nth-child(4) > section section p:nth-child(3) {
+  width: 20%;
+  text-align: end;
+}
+
+/*SECTION 5 (CardPayment) */
+.fragment-07-mainSection > :nth-child(5) {
+  padding-top: 70px;
+  width: 80%;
+  position: relative;
+}
+
+.fragment-07-mainSection > :nth-child(5)::before {
+  content: "";
+  width: 70%;
+  top: 35px;
+  position: absolute;
+  height: 2px;
+  background-color: #0a58ca;
+  z-index: 10;
+}
+
+.fragment-07-mainSection > :nth-child(5) > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.fragment-07-mainSection > :nth-child(5) > section > section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.fragment-07-mainSection > :nth-child(5) > section > section:nth-child(1) {
+  flex-direction: column;
+  align-items: center;
+}
+.fragment-07-mainSection > :nth-child(5) > section > section:nth-child(1) p {
+  font-weight: bold;
+  color: red;
+  font-size: 1.5em;
+}
+
+/*# sourceMappingURL=fragment-07.css.map */

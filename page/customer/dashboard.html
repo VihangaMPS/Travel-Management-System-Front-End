@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customer Dashboard</title>
+    <link rel="stylesheet" href="../../assets/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/style/customer/dashboard.css">
+    <link rel="stylesheet" href="../../assets/style/customer/fragment-07.css">
+    <script>
+      /*  if (!localStorage.getItem("Authorization")) {
+            location.replace("../../index.html");
+        }*/
+    </script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">google</a></li>
+            <li><a href="#">facebook</a></li>
+            <li><a href="#">twitter</a></li>
+        </ul>
+        <ul>
+            <li><a type="button" data-bs-toggle="modal" data-bs-target="#registerModel">Account</a></li>
+            <li><a type="button" style="cursor: pointer" id="btnLogout">Logout</a></li>
+
+        </ul>
+    </nav>
+</header>
+<main class="mainFragment">
+    <main class="fragment-01" style="display: flex;">
+        <div>
+            <img src="../../assets/img/2ecf7364cd78b7222311518159a72179.jpg" alt="travel logo" height="95px">
+        </div>
+        <div><p><a href="#">Home</a></p></div>
+        <div><p><a href="#">AboutUS</a></p></div>
+        <div><p><a href="#">Contact</a></p></div>
+        <div><p><a href="#"></a></p></div>
+    </main>
+    <main class="fragment-02" style="display:flex;">
+        <section>
+            <section class="main-category-section">
+                <div><p>Regular</p></div>
+                <div><p>Medium</p></div>
+                <div><p>Luxury</p></div>
+                <div><p>Super-Luxury</p></div>
+            </section>
+        </section>
+    </main>
+    <main class="fragment-03" style="display: none;">
+        <section>
+            <section>
+                <section>
+                    <h4>Find your next stay</h4>
+                    <p>Search low prices on hotels, homes and much more...</p>
+                </section>
+                <section>
+                    <section class="fragment-03-main-section">
+                        <aside>
+                            <select class="form-select w-100 h-100" aria-label="Default select example" id="locationSelectBox">
+                            </select>
+                        </aside>
+                        <aside>
+                            <input type="date" class="form-control form-control-color w-100 h-100">
+                        </aside>
+                        <aside class="adult-children-room-section">
+                            <div class="h-100">
+                                <p><span id="adultValue">0</span> <b> Adult   </b><span id="childrenValue">0</span> <b> Children   </b>  <span id="roomValue">0</span> <b> Room</b></p>
+                                <div class="option-body">
+                                    <section>
+                                        <h4>Adult</h4>
+                                        <aside>
+                                            <h3 id="adultDecrement">-</h3>
+                                            <h4>0</h4>
+                                            <h3 id="adultIncrement">+</h3>
+                                        </aside>
+                                    </section>
+                                    <section>
+                                        <h4>Children</h4>
+                                        <aside>
+                                            <h3 id="childrenDecrement">-</h3>
+                                            <h4>0</h4>
+                                            <h3 id="childrenIncrement">+</h3>
+                                        </aside>
+                                    </section>
+                                    <section>
+                                        <h4>Rooms</h4>
+                                        <aside>
+                                            <h3 id="roomDecrement">-</h3>
+                                            <h4>0</h4>
+                                            <h3 id="roomIncrement">+</h3>
+                                        </aside>
+                                    </section>
+                                </div>
+                            </div>
+                        </aside>
+                        <aside class="btn-option-search">
+                            <p>Search</p>
+                        </aside>
+                    </section>
+                </section>
+                <section></section>
+            </section>
+        </section>
+    </main>
+    <main class="fragment-04" style="display: none;">
+        <section>
+            <section>
+                <section>
+                    <section class="fragment-04-main-section">
+        <!--                <figure> <img src="../../assets/img/hotel/ananthara%20hotel.jpeg" alt=""><figcaption>Honda RBC</figcaption> <div><span></span></div></figure>-->
+                    </section>
+                </section>
+            </section>
+            <section></section>
+        </section>
+    </main>
+    <main class="fragment-05 pt-5" style="display: none;">
+        <section>
+            <section>
+                <section>
+                    <section class="fragment-05-main-section">
+                   <!--     <figure> <img src="../../assets/img/vehicle/susuki%20maruti.jpeg" alt=""><figcaption>Honda RBC</figcaption> <div><span></span></div></figure>-->
+                    </section>
+                </section>
+            </section>
+            <section></section>
+        </section>
+    </main>
+<mian class="fragment-06 pt-5" style="height: 40vh;display: none">
+    <section>
+        <section class="row justify-content-sm-center">
+            <button class="btn btn-primary btn-lg w-auto fw-bold" id="btnBooking">Booking</button>
+        </section>
+    </section>
+</mian>
+
+    <mian class="fragment-07 pt-5" style="display: none">
+        <section>
+            <section class="fragment-07-mainSection">
+                    <section>
+                        <section><p>Adult</p><p>-1</p></section>
+                        <section><p>Children</p><p>-1</p></section>
+                        <section><p>Room</p><p>-1</p></section>
+                    </section>
+                    <section id="hotelSelectSection">
+                        <section>
+                        </section>
+                        <section>
+                            <section><p>Hotel Name </p><p>Ananthara Hotel</p></section>
+                            <section><p>Email </p><p>Ananthara@gmailcom</p></section>
+                            <section><p>Location </p><p>Kaluthara</p></section>
+                            <section><p>Star rate </p><p>5</p></section>
+                            <section><p>Tel </p><p>5</p></section>
+                            <section>
+                                <select class="form-select w-25 h-100" aria-label="Default select example" id="hotelOptionBox">
+                            </select>
+                            </section>
+                        </section>
+                    </section>
+                    <section id="vehicleSelectSection">
+                        <section>
+                            <img src="../../assets/img/vehicle/susuki%20maruti.jpeg" alt="">
+                        </section>
+                        <section >
+                            <section><p>Vehicle Qty </p><p>2</p></section>
+                            <section><p>Brand Name </p><p>Honda</p></section>
+                            <section><p>Fee For Day </p><p>1000.00/p</section>
+                            <section><p>Fee for 1KM</p><p>2000.00</p></section>
+                            <section><p>Fuel for 1KM</p><p>2000.00</p></section>
+                            <section><p>Seat</p><p>4</p></section>
+                        </section>
+                    </section>
+                    <section id="travelPriceSection">
+                        <section>
+                            <section><p>Name</p><p>Amount</p><p>Total</p></section>
+                            <section><p>Hotel Price</p><p>45000.00</p> <p></p></section>
+                            <section><p>Vehicle Price</p><p>45000.00</p> <p></p></section>
+                            <section><p>Travel Charge Price</p><p>45000.00</p> <p></p></section>
+                            <section><p>Guide Price</p><p>45000.00</p> <p></p></section>
+                            <section><p style="color: red">Total</p><p>45000.00</p> <p></p></section>
+                        </section>
+                    </section>
+                    <section>
+                        <section>
+                            <section><h4>Total </h4><p id="totalAmount">15000.00</p></section>
+                            <section>
+                                <div class="form-floating mb-3 w-50">
+                                <input type="number" class="form-control" id="cardNumber" placeholder="4445 XXXX XXXX XXXX">
+                                <label for="cardNumber">Card Number</label>
+                            </div>
+                            </section>
+                            <section>
+                                <div class="form-floating mb-3 pe-5">
+                                    <input type="number" class="form-control" id="cardExpireDate" placeholder="Ex-:23/5" maxlength="5">
+                                    <label for="cardExpireDate">Expire Date</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="cardCCV" placeholder="ccv" maxlength="3">
+                                    <label for="cardCCV">CCV</label>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="form-floating mb-3 w-25">
+                                    <input type="text" class="form-control" id="cardHolderName" placeholder="Card Holder Name" >
+                                    <label for="cardHolderName">Card Holder Name</label>
+                                </div>
+                            </section>
+                            <section>
+                                <button class="btn btn-danger btn-lg" id="btnPayment">PAY</button>
+                            </section>
+                        </section>
+                    </section>
+                    <section></section>
+            </section>
+        </section>
+    </mian>
+
+
+
+
+
+</main>
+<footer class="mt-5">
+    <section style="width: 100vw;height: 20vh;background-color: #2a2c2f"></section>
+</footer>
+
+<script src="../../assets/jQuery/jquery-3.7.1.min.js"></script>
+<script src="../../assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+<script type="module" src="../../controller/CustomerLoginController.js"></script>
+<script type="module" src="../../controller/customer/DashboardController.js"></script>
+<script type="module" src="../../controller/customer/CategoryController.js"></script>
+<script type="module" src="../../controller/customer/BookingSearchController.js"></script>
+<script type="module" src="../../controller/customer/BookingController.js"></script>
+<script>
+
+
+</script>
+</body>
+</html>

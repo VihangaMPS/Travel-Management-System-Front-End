@@ -1,0 +1,502 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+}
+.visible{
+  display: block !important;
+}
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100vw;
+  color: white;
+  height: 8vh;
+  background: #1a1d20;
+
+  nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      margin: 0;
+      width: 40%;
+      list-style-type: none;
+      display: flex;
+
+
+    }
+
+    ul:first-child {
+      justify-content: start;
+
+      li {
+        padding-right: 5%;
+      }
+    }
+
+    ul:last-child {
+      padding-left: 2%;
+      justify-content: end;
+
+      li {
+        padding-right: 5%;
+      }
+    }
+  }
+
+}
+
+.mainFragment{
+  margin-bottom: 20vh;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  /*  fragment 01*/
+  main:nth-child(1) {
+    height: 100px;
+    align-items: center;
+    box-shadow: 2px 0 2px black;
+    background: #ffffff;
+
+    div {
+      padding-left: 5%;
+    }
+
+  }
+
+
+}
+
+/*  fragment 02*/
+.fragment-02 {
+  width: 100%;
+  height: 50vh;
+}
+
+.fragment-02 > section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  section {
+    width: 70%;
+    display: flex;
+    height: 70%;
+  div:nth-child(1){
+      background: linear-gradient(to left top, #31ccda, #06da38);
+  }
+    div:nth-child(2){
+    background: linear-gradient(to left top, #31ccda, #ff00f1);
+    }
+    div:nth-child(3){
+    background: linear-gradient(to left top, #31ccda,blue);
+    }
+    div:nth-child(4){
+      background: linear-gradient(to left top, #31ccda, #da0000);
+    }
+    div:hover{
+      box-shadow: 0 0 10px #0e1111;
+      transition:all 1s;
+    }
+    div {
+      width: 100%;
+      margin: 2px;
+      border: black solid 1px;
+      display: flex;
+      align-items: center;
+      border-radius: 12px;
+      cursor: pointer;
+
+
+      p {
+        width: 100%;
+        color: white;
+        font-weight: bold;
+        text-shadow: 0 0 10px black;
+        text-align: center;
+        font-size: 1.5em;
+      }
+      p:hover{
+        color: #bb0b63;
+      }
+    }
+  }
+}
+
+/*  fragment 03*/
+
+.fragment-03 {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+
+}
+
+.fragment-03 > section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.fragment-03 > section > section {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fragment-03 > section > section > :nth-child(1) {
+  p, h4 {
+    text-align: center;
+  }
+}
+
+.fragment-03 > section > section > :nth-child(2) {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.fragment-03 > section > section > :nth-child(2) > section {
+  width: 100%;
+  height: 50px;
+  display: flex;
+
+  aside:nth-child(1) {
+    width: 30%;
+    font-weight: bold;
+    *{
+      font-weight: bold;
+    }
+  }
+
+  aside:nth-child(2) {
+   *{
+    font-weight: bold;
+   }
+
+    width: 25%;
+  }
+
+  aside:nth-child(3) {
+    width: 35%;
+    height: 100%;
+    box-shadow: 0 0 1px black;
+    border-radius: 4px;
+    margin-left: 1px;
+    position: relative;
+    cursor: pointer;
+
+    p {
+      width: 100%;
+      padding-top: 15px;
+      padding-left: 10px;
+    }
+
+    .option-body {
+      display: none;
+      position: absolute;
+      background-color: white;
+      width: 100%;
+      margin-top: 5px;
+      z-index: 100;
+      padding-top: 5px;
+      height: 250px;
+      margin-left: -1px;
+      box-shadow: 0 0 2px #070707;
+      border-radius: 5px;
+      flex-direction: column;
+
+      section {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h4 {
+          width: 50%;
+          text-align: center;
+          font-size: 1em;
+        }
+
+        aside {
+          width: 49%;
+          height: 45px;
+          margin: 5px;
+          display: flex;
+          align-items: center;
+          border: #312e2e solid 1px;
+          border-radius: 5px;
+
+          h3 {
+            width: 50%;
+            color: #15a5d3;
+            text-align: center;
+            cursor: pointer;
+          }
+        }
+      }
+
+    }
+  }
+
+
+  aside:nth-child(4) {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a58ca;
+    cursor: pointer;
+
+    p {
+      text-align: center;
+      margin: 0;
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
+/*Fragment-04*/
+
+.fragment-04 {
+  width: 100%;
+  z-index: 1;
+
+  section {
+    width: 100%;
+  }
+}
+
+.fragment-04 > section > section {
+  display: flex;
+  justify-content: center;
+
+  ::-webkit-scrollbar {
+    width: 4px !important;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #eeeeee !important;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #060a1f !important;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #131a6e !important;
+  }
+}
+
+.fragment-04 > section > section > section {
+  width: 80%;
+  border: black solid 2px;
+  border-radius: 12px;
+  height: 250px;
+  overflow-x: scroll;
+
+
+  section {
+    width: 120%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: rgba(220, 234, 231, 0.7);
+
+  }
+  figure{
+    border-radius: 12px;
+    position: relative;
+    width:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 0;
+    height: 95%;
+    min-width: 300px;
+    cursor: pointer;
+    border: #c40095 solid 4px;
+    i{
+      display: none;
+    }
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+    }
+    figcaption{
+      align-self: center;
+      padding-top: 25%;
+      color: white;
+      width: 100%;
+      z-index: 10;
+      text-shadow: 0 0 10px black,0 0 10px black,0 0 10px black;
+      font-size: 1.5em;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+  figure >  div {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 30px;
+    border-radius: 5px;
+    height: 30px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      width: 20px;
+      cursor: pointer;
+      height: 20px;
+      background: rgba(52, 9, 222, 0.25);
+
+    }
+  }
+
+
+}
+
+/*Fragment 05*/
+
+.fragment-05 {
+  width: 100%;
+  z-index: 1;
+
+  section {
+    width: 100%;
+  }
+}
+
+.fragment-05 > section > section {
+  display: flex;
+  justify-content: center;
+
+  ::-webkit-scrollbar {
+    width: 4px !important;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #eeeeee !important;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #060a1f !important;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #131a6e !important;
+  }
+}
+
+.fragment-05 > section > section > section {
+  width: 80%;
+  border: black solid 2px;
+  height: 250px;
+  overflow-x: scroll;
+  border-radius: 12px;
+
+
+  section {
+    width: 120%;
+    height: 100%;
+    display: flex;
+  align-items: center;
+    background: rgba(220, 234, 231, 0.7);
+
+  }
+  figure{
+    border-radius: 12px;
+    position: relative;
+    width:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 0;
+    height: 95%;
+    min-width: 300px;
+    cursor: pointer;
+    border: blueviolet solid 4px;
+    i{
+      display: none;
+    }
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+    }
+    figcaption{
+      align-self: center;
+      padding-top: 25%;
+      color: white;
+      width: 100%;
+      z-index: 10;
+      text-shadow: 0 0 10px black,0 0 10px black,0 0 10px black;
+      font-size: 1.5em;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+  figure >  div {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      width: 20px;
+      cursor: pointer;
+      height: 20px;
+      background: rgba(52, 9, 222, 0.25);
+
+    }
+  }
+
+}
+

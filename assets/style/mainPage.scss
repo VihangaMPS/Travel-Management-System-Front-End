@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+}
+header {
+  width: 100vw;
+  color: white;
+  height: 8vh;
+  background: #1a1d20;
+
+  nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      margin: 0;
+      width: 40%;
+      list-style-type: none;
+      display: flex;
+
+
+    }
+
+    ul:first-child {
+      justify-content: start;
+
+      li {
+        padding-right: 5%;
+      }
+    }
+
+    ul:last-child {
+      padding-left: 2%;
+      justify-content: end;
+
+      li {
+        border-right: white solid 1px;
+        padding-right: 5%;
+      }
+    }
+  }
+
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  /*  fragment 01*/
+  main:nth-child(1) {
+    height: 100px;
+    align-items: center;
+
+    div {
+      padding-left: 5%;
+    }
+
+  }
+
+
+  /*  fragment 02*/
+  main:nth-child(2) {
+    background-image: url("../img/backfound1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    color: white;
+    text-shadow: 0 0 10px black, 0 0 10px black;
+
+    section {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+
+      section {
+        height: 100px;
+      }
+    }
+
+  }
+
+  /*fragment 03*/
+  main:nth-child(3) {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    h2{
+      text-align: center;
+    }
+    section {
+      width: 100%;
+      display: flex;
+      height: 40vh;
+      justify-content: center;
+
+      section {
+        width: 94%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          padding: 10px;
+          width: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          img:hover{
+            scale: 1.1;
+            transition: 1s all;
+          }
+
+          p {
+            width: 100%;
+            position: absolute;
+            color: white;
+            font-size: 2em;
+            bottom: 20px;
+            text-align: center;
+            text-shadow: 0 0 10px black;
+          }
+
+        }
+      }
+
+    }
+  }
+
+
+}

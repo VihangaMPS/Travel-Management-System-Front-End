@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../../assets/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/style/admin/console.css">
+    <link rel="stylesheet" href="../../assets/style/admin/console-dash.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin-Console</title>
+    <script>
+       /* if(!localStorage.getItem("Authorization")){
+            location.replace('../../admin.html')
+        }*/
+    </script>
+</head>
+<body>
+<main class="main-root">
+    <aside>
+        <main>
+            <section class="aside-up-section">
+                <section>
+                    <section>
+                        <div class="btn-aside-toggle"></div>
+                    </section>
+                </section>
+                <section>
+                    <div></div>
+                    <h4>Hello</h4>
+                    <h3 id="userProfileName"></h3>
+                </section>
+            </section>
+            <section class="aside-down-section">
+
+                <section>
+
+                   <button class="accordion">Dashboard</button>
+                    <div class="panel">
+                        <button  onclick="navigate('BOOKING')" id="btnNavigateBooking">Bookings</button>
+                    </div>
+                    <button class="accordion">Travel</button>
+                    <div class="panel">
+                        <button  onclick="navigate('TRAVEL_CATEGORY')" id="btnNavigateTravelCategory">Travel Category</button>
+                        <button  onclick="navigate('TRAVEL_AREA')" id="btnNavigateTravelArea">Travel Area</button>
+                    </div>
+                    <button class="accordion">Hotel</button>
+                    <div class="panel">
+                        <button  onclick="navigate('HOTEL')" id="btnNavigateHotel">Manage Hotel</button>
+                    </div>
+                    <button class="accordion">Vehicle</button>
+                    <div class="panel">
+                        <button  onclick="navigate('VEHICLE_CATEGORY')" id="btnNavigateVehicleCategory">Vehicle Category</button>
+                        <button  onclick="navigate('VEHICLE_BRAND')" id="btnNavigateVehicle">Vehicle Brand</button>
+                    </div>
+                    <button class="accordion">Guide</button>
+                    <div class="panel">
+                        <button  onclick="navigate('GUIDE')" id="btnNavigateGuide">Manage Guide</button>
+                    </div>
+                    <button class="accordion">Report</button>
+                    <div class="panel">
+                        <button  onclick="navigate('DALY_REPORT')" id="btnNavigateDailyReport">Daly Report</button>
+                        <button  onclick="navigate('WEEKLY_REPORT')" id="btnNavigateWeeklyReport">Weekly Report</button>
+                        <button  onclick="navigate('MONTHLY_REPORT')" id="btnNavigateMonthlyReport">Monthly Report</button>
+                    </div>
+                    <button class="accordion">Author</button>
+                    <div class="panel">
+                        <button  onclick="navigate('USER')" id="btnNavigateUser">Manage User</button>
+                    </div>
+
+                </section>
+            </section>
+        </main>
+    </aside>
+
+    <main class="main-wrapper" style="background-color: rgba(255,253,253,0.87)">
+        <header>
+            <nav>
+                <div class="btn-toggle-header"></div>
+                <h2 id="main-header">Main Content</h2>
+                <ul>
+                    <li><a href="../../admin.html">logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-dash mt-5">
+            <main class="main-dashboard" style="display: none;"></main>
+            <main class="main-booking" style="display: none">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Hotel Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Star-Rate</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Map</th>
+                                <th scope="col">Tel</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                                <td>@twitter</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-travel-category" style="display: none;">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                        <section class="row   ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="ID" aria-label=".form-control-sm " disabled id="travelCategoryID">
+                        </section>
+                        <section class="row mt-4 ms-5">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Travel Category" aria-label=".form-control-sm " id="travelCategoryName">
+                        </section>
+                        <section class="row  mt-4 ms-5">
+                            <button class="btn btn-primary col-1" id="btnSaveTravelCategory">Save</button>
+                        </section>
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section ms-5">
+                        <table class="table table-hover w-75">
+                            <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Travel Category Name</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblTravelCategory">
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-travel-area" style="display: none;">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                        <section class="row   ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="ID" aria-label=".form-control-sm " disabled id="travelAreaID">
+                        </section>
+                        <section class="row mt-4 ms-5">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Travel Area Name" aria-label=".form-control-sm " id="travelAreaName">
+                        </section>
+                        <section class="row  mt-4 ms-5">
+                            <button class="btn btn-primary  col-1" id="btnSaveTravelArea">Save</button>
+                        </section>
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section ms-5">
+                        <table class="table table-hover w-75">
+                            <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Travel Area Name</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblTravelArea">
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-hotel" style="display: none;">
+                <section>
+                    <section class="row hotel-up-section container-fluid w-100">
+                        <section class="row ms-5 ">
+                            <input class="form-control form-control-sm col-4 w-25" type="text"
+                                   placeholder="Hotel ID" aria-label=".form-control-sm" id="hotelID" disabled hidden="hidden">
+                            <input class="form-control form-control-sm col-4 w-25" type="text"
+                                   placeholder="Hotel Name" aria-label=".form-control-sm" id="hotelName">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
+                                   placeholder="Hotel Email" aria-label=".form-control-sm" id="hotelEmail">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
+                                   placeholder="Hotel Star-Rate" aria-label=".form-control-sm" id="hotelStarRate">
+                        </section>
+                        <section class="row  ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25 " type="text"
+                                   placeholder="Hotel Location" aria-label=".form-control-sm" id="hotelLocation">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
+                                   placeholder="Hotel Map" aria-label=".form-control-sm" id="hotelMap">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5 " type="number"
+                                   placeholder="Option 1" aria-label=".form-control-sm" id="hotelOption1">
+                        </section>
+                        <section class="row  ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25  " type="number"
+                                   placeholder="Option 2" aria-label=".form-control-sm" id="hotelOption2">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
+                                   placeholder="Option 3" aria-label=".form-control-sm " id="hotelOption3">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
+                                   placeholder="Option 4" aria-label=".form-control-sm" id="hotelOption4">
+                        </section>
+                        <section class="row mt-4 ms-5">
+                            <input class="form-control form-control-sm col-4 w-25  " type="text"
+                                   placeholder="Hotel Tel" aria-label=".form-control-sm" id="hotelTel">
+                            <input class="form-control form-control-sm col-4 w-25  ms-5" type="file"
+                                   placeholder="Add Image" aria-label=".form-control-sm" id="hotelImage">
+                            <button class="btn btn-success btn-sm col-1 fw-bold" id="btnImageUploadHotel" disabled>upload</button>
+                        </section>
+                        <section class="row  mt-4 ms-5">
+                            <button class="btn btn-primary col-1 fw-bold" id="btnHotelSave">Save</button>
+                        </section>
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover">
+                            <thead class="table-dark text-center">
+                            <tr class="pb-5">
+                                <th scope="col">#ID</th>
+                                <th scope="col">Hotel Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Map</th>
+                                <th scope="col">Star-Rate</th>
+                                <th scope="col">Tel</th>
+                                <th scope="col">Option 1</th>
+                                <th scope="col">Option 2</th>
+                                <th scope="col">Option 3</th>
+                                <th scope="col">Option 4</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblHotel">
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-vehicle-category" style="display: none;">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                        <section class="row   ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="ID" aria-label=".form-control-sm " disabled id="vehicleCategoryID">
+                        </section>
+                        <section class="row mt-4 ms-5">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Vehicle Category" aria-label=".form-control-sm " id="vehicleCategoryName">
+                        </section>
+                        <section class="row  mt-4 ms-5">
+                            <button class="btn btn-primary col-1" id="btnSaveVehicleCategory">Save</button>
+                        </section>
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section ms-5">
+                        <table class="table table-hover w-75">
+                            <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Category Name</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblVehicleCategory">
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-vehicle-brand" style="display: none;">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                        <section class="row ms-5 ">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Vehicle ID" aria-label=".form-control-sm " hidden="hidden" id="vehicleID">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Vehicle Name" aria-label=".form-control-sm" id="vehicleName">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
+                                   placeholder="Fee Day" aria-label=".form-control-sm " id="vehicleFeeDay">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="number"
+                                   placeholder="Fee 1KM" aria-label=".form-control-sm " id="vehicleFee1KM">
+                        </section>
+                        <section class="row  ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="number"
+                                   placeholder="Fuel 1KM" aria-label=".form-control-sm " id="vehicleFuel1KM">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="number" placeholder="Seat"
+                                   aria-label=".form-control-sm " id="vehicleSeat">
+                            <select class="form-select col-4 w-25 ms-5" aria-label="Default select example" id="vehicleCategoryOption">
+                                <option selected value="1">Vehicle Category</option>
+                            </select>
+                        </section>
+                        <section class="row mt-4 ms-5">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="file"
+                                   placeholder="Add Image" aria-label=".form-control-sm " id="vehicleImage" name="file">
+                            <button class="btn btn-success btn-sm col-1 fw-bold" id="btnImageUploadVehicle" disabled>upload</button>
+                        </section>
+                        <section class="row  mt-4 ms-5">
+                            <button class="btn btn-primary col-1 fw-bold" id="btnSaveVehicle">Save</button>
+                        </section>
+
+                    </section>
+                    <hr>
+                    <section class="vehicle-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Fee 1Day</th>
+                                <th scope="col">Fee 1KM</th>
+                                <th scope="col">Fuel 1KM</th>
+                                <th scope="col">Seat</th>
+                                <th scope="col">Vehicle Category</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblVehicleBrand">
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-guide" style="display: none">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                        <section class="row ms-5 ">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="number"
+                                   placeholder="ID" aria-label=".form-control-sm" hidden="hidden" disabled id="guideID">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Name" aria-label=".form-control-sm" id="guideName">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
+                                   placeholder="Address" aria-label=".form-control-sm" id="guideAddress">
+                        </section>
+                        <section class="row  ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="number"
+                                   placeholder="Price" aria-label=".form-control-sm" id="guidePrice">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
+                                   placeholder="Tel" aria-label=".form-control-sm" id="guideTel">
+                        </section>
+                        <section class="row  mt-4 ms-5">
+                            <button class="btn btn-primary col-2" id="btnSaveGuide">Save Guide</button>
+                        </section>
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Tel</th>
+                                <th scope="col">Action</th>
+                            </thead>
+                            <tbody id="tblGuide">
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-report-daly" style="display: none">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Hotel Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Star-Rate</th>
+                                <th scope="col">Address</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-report-weekly" style="display: none">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Hotel Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Star-Rate</th>
+                                <th scope="col">Address</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-report-monthly" style="display: none">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-warning">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Hotel Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Star-Rate</th>
+                                <th scope="col">Address</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+            <main class="main-user" style="display: none">
+                <section>
+                    <section class="hotel-up-section container-fluid w-100">
+                        <section class="row ms-5 ">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="ID" aria-label=".form-control-sm " disabled hidden="hidden" id="userID">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="text"
+                                   placeholder="Name" aria-label=".form-control-sm" id="userName">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="email"
+                                   placeholder="Email" aria-label=".form-control-sm" id="userEmail">
+                        </section>
+                        <section class="row  ms-5 mt-4">
+                            <input class="form-control form-control-sm col-4 w-25 me-1" type="password"
+                                   placeholder="Password" aria-label=".form-control-sm " id="userPwd">
+                            <input class="form-control form-control-sm col-4 w-25 ms-5" type="text"
+                                   placeholder="Role" aria-label=".form-control-sm" id="userRole">
+                        </section>
+                        <section class="row  mt-4 ms-5">
+                            <button class="btn btn-primary col-2" id="btnSaveUser">Save User</button>
+                        </section>
+                    </section>
+                    <hr>
+                    <section class="hotel-down-section">
+                        <table class="table table-hover ">
+                            <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Action</th>
+                            </thead>
+                            <tbody id="tblUser">
+                            </tbody>
+                        </table>
+
+                    </section>
+                </section>
+            </main>
+        </main>
+    </main>
+</main>
+<footer>
+
+</footer>
+<!-- MODELS -->
+<aside>
+  <!--  DELETE MODEL-->
+    <div class="modal fade" id="deleteModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="routeModalLabel">Are you sure delete this..?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger btn-sm" id="btnDeleteModel" data-bs-dismiss="modal">Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</aside>
+
+<script src="../../assets/jQuery/jquery-3.7.1.min.js"></script>
+<script src="../../assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+<script  src="../../controller/ConsoleController.js"></script>
+<script type="module" src="../../controller/HotelController.js"></script>
+<script type="module" src="../../controller/VehicleController.js"></script>
+<script type="module" src="../../controller/VehicleCategoryController.js"></script>
+<script type="module" src="../../controller/TravelAreaController.js"></script>
+<script type="module" src="../../controller/TravelCategoryController.js"></script>
+<script type="module" src="../../controller/GuideController.js"></script>
+<script type="module" src="../../controller/UserController.js"></script>
+
+</body>
+</html>

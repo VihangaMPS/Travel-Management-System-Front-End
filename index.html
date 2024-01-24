@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Next Travel(pvt)</title>
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style/mainPage.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+                <ul>
+                    <li><a href="#" >google</a></li>
+                    <li><a href="#">facebook</a></li>
+                    <li><a href="#">twitter</a></li>
+                </ul>
+               <ul>
+                   <li><a type="button" data-bs-toggle="modal" data-bs-target="#loginModel">login</a></li>
+                   <li><a type="button" data-bs-toggle="modal" data-bs-target="#registerModel">signup</a></li>
+               </ul>
+        </nav>
+    </header>
+    <main class="mainHeader">
+        <main class="fragment-01">
+            <div>
+                <img src="./assets/img/2ecf7364cd78b7222311518159a72179.jpg" alt="travel logo" height="95px">
+            </div>
+            <div><p><a href="#">Home</a></p></div>
+            <div><p><a href="#">AboutUS</a></p></div>
+            <div><p><a href="#">Contact</a></p></div>
+            <div><p><a href="#">Blog</a></p></div>
+        </main>
+        <main class="fragment-02">
+            <section>
+                <h1>Sri Lanka</h1>
+                <h2>Find incredible things to do around the island.</h2>
+                <section></section>
+            </section>
+        </main>
+       <main class="fragment-03">
+           <h2>Top Destinations</h2>
+           <section>
+              <section>
+                  <div><img src="./assets/img/category/galle-fort-270x335.jpg" alt="img"><p>Galle</p></div>
+                  <div><img src="./assets/img/category/matara_1-270x335.jpg" alt="img"><p>Mathara</p></div>
+                  <div><img src="./assets/img/category/meemure-matale-270x335.jpg" alt="img"><p>Mimura</p></div>
+                  <div><img src=./assets/img/category/polonnaruwa-lanka-travel-guide-270x335.jpg alt="img"><p>Polonaruwa</p></div>
+              </section>
+           </section>
+       </main>
+    </main>
+    <footer>
+        <section></section>
+    </footer>
+        <!--MODELS-BootStrap-->
+
+    <aside>
+        <section>
+        <div class="modal fade" id="loginModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loginModelLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body"> <!--model-body-->
+
+                        <div class="mb-3 row">
+                            <label for="loginEmail" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email"  class="form-control" id="loginEmail" placeholder="Enter Email">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="customerLoginPassword" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="customerLoginPassword" placeholder="Enter Password">
+                            </div>
+                        </div>
+                    </div><!-- model-body-end-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="btnCustomerLogin" data-bs-dismiss="modal">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </section>
+        <section>
+            <div class="modal fade" id="registerModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="registerModelLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="registerModelLabel">register</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body"> <!--model-body-->
+
+                            <div class="mb-3 row">
+                                <label for="loginEmail" class="col-sm-2 col-form-label">NIC</label>
+                                <div class="col-sm-10">
+                                    <input type="text"  class="form-control" id="nic" placeholder="Enter NIC">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="loginEmail" class="col-sm-2 col-form-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text"  class="form-control" id="name" placeholder="Enter Name">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="loginEmail" class="col-sm-2 col-form-label">Address</label>
+                                <div class="col-sm-10">
+                                    <input type="text"  class="form-control" id="address" placeholder="Enter Address">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="loginEmail" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email"  class="form-control" id="registerEmail" placeholder="Enter Email">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="registerPassword" class="col-sm-2 col-form-label">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="registerPassword" placeholder="Enter Password">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="conformPassword" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="conformPassword" placeholder="Conform Password">
+                                </div>
+                            </div>
+                        </div><!-- model-body-end-->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success" id="btnCustomerRegister" data-bs-dismiss="modal">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </aside>
+
+
+
+<script src="./assets/jQuery/jquery-3.7.1.min.js"></script>
+<script src="./assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+<script type="module" src="./controller/CustomerLoginController.js"></script>
+</body>
+</html>

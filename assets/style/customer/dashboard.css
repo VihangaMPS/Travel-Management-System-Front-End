@@ -1,0 +1,441 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.visible {
+  display: block !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100vw;
+  color: white;
+  height: 8vh;
+  background: #1a1d20;
+}
+header nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  margin: 0;
+  width: 40%;
+  list-style-type: none;
+  display: flex;
+}
+header nav ul:first-child {
+  justify-content: start;
+}
+header nav ul:first-child li {
+  padding-right: 5%;
+}
+header nav ul:last-child {
+  padding-left: 2%;
+  justify-content: end;
+}
+header nav ul:last-child li {
+  padding-right: 5%;
+}
+
+.mainFragment {
+  margin-bottom: 20vh;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  /*  fragment 01*/
+}
+main main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+main main:nth-child(1) {
+  height: 100px;
+  align-items: center;
+  box-shadow: 2px 0 2px black;
+  background: #ffffff;
+}
+main main:nth-child(1) div {
+  padding-left: 5%;
+}
+
+/*  fragment 02*/
+.fragment-02 {
+  width: 100%;
+  height: 50vh;
+}
+
+.fragment-02 > section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fragment-02 > section section {
+  width: 70%;
+  display: flex;
+  height: 70%;
+}
+.fragment-02 > section section div:nth-child(1) {
+  background: linear-gradient(to left top, #31ccda, #06da38);
+}
+.fragment-02 > section section div:nth-child(2) {
+  background: linear-gradient(to left top, #31ccda, #ff00f1);
+}
+.fragment-02 > section section div:nth-child(3) {
+  background: linear-gradient(to left top, #31ccda, blue);
+}
+.fragment-02 > section section div:nth-child(4) {
+  background: linear-gradient(to left top, #31ccda, #da0000);
+}
+.fragment-02 > section section div:hover {
+  box-shadow: 0 0 10px #0e1111;
+  transition: all 1s;
+}
+.fragment-02 > section section div {
+  width: 100%;
+  margin: 2px;
+  border: black solid 1px;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.fragment-02 > section section div p {
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 10px black;
+  text-align: center;
+  font-size: 1.5em;
+}
+.fragment-02 > section section div p:hover {
+  color: #bb0b63;
+}
+
+/*  fragment 03*/
+.fragment-03 {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+}
+
+.fragment-03 > section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.fragment-03 > section > section {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fragment-03 > section > section > :nth-child(1) p, .fragment-03 > section > section > :nth-child(1) h4 {
+  text-align: center;
+}
+
+.fragment-03 > section > section > :nth-child(2) {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.fragment-03 > section > section > :nth-child(2) > section {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+.fragment-03 > section > section > :nth-child(2) > section aside:nth-child(1) {
+  width: 30%;
+  font-weight: bold;
+}
+.fragment-03 > section > section > :nth-child(2) > section aside:nth-child(1) * {
+  font-weight: bold;
+}
+.fragment-03 > section > section > :nth-child(2) > section aside:nth-child(2) {
+  width: 25%;
+}
+.fragment-03 > section > section > :nth-child(2) > section aside:nth-child(2) * {
+  font-weight: bold;
+}
+.fragment-03 > section > section > :nth-child(2) > section aside:nth-child(3) {
+  width: 35%;
+  height: 100%;
+  box-shadow: 0 0 1px black;
+  border-radius: 4px;
+  margin-left: 1px;
+  position: relative;
+  cursor: pointer;
+}
+.fragment-03 > section > section > :nth-child(2) > section aside:nth-child(3) p {
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+.fragment-03 > section > section > :nth-child(2) > section aside:nth-child(3) .option-body {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  margin-top: 5px;
+  z-index: 100;
+  padding-top: 5px;
+  height: 250px;
+  margin-left: -1px;
+  box-shadow: 0 0 2px #070707;
+  border-radius: 5px;
+  flex-direction: column;
+}
+.fragment-03 > section > section > :nth-child(2) > section aside:nth-child(3) .option-body section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fragment-03 > section > section > :nth-child(2) > section aside:nth-child(3) .option-body section h4 {
+  width: 50%;
+  text-align: center;
+  font-size: 1em;
+}
+.fragment-03 > section > section > :nth-child(2) > section aside:nth-child(3) .option-body section aside {
+  width: 49%;
+  height: 45px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  border: #312e2e solid 1px;
+  border-radius: 5px;
+}
+.fragment-03 > section > section > :nth-child(2) > section aside:nth-child(3) .option-body section aside h3 {
+  width: 50%;
+  color: #15a5d3;
+  text-align: center;
+  cursor: pointer;
+}
+.fragment-03 > section > section > :nth-child(2) > section aside:nth-child(4) {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a58ca;
+  cursor: pointer;
+}
+.fragment-03 > section > section > :nth-child(2) > section aside:nth-child(4) p {
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+  color: white;
+}
+
+/*Fragment-04*/
+.fragment-04 {
+  width: 100%;
+  z-index: 1;
+}
+.fragment-04 section {
+  width: 100%;
+}
+
+.fragment-04 > section > section {
+  display: flex;
+  justify-content: center;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.fragment-04 > section > section ::-webkit-scrollbar {
+  width: 4px !important;
+}
+.fragment-04 > section > section ::-webkit-scrollbar-track {
+  background: #eeeeee !important;
+}
+.fragment-04 > section > section ::-webkit-scrollbar-thumb {
+  background: #060a1f !important;
+}
+.fragment-04 > section > section ::-webkit-scrollbar-thumb:hover {
+  background: #131a6e !important;
+}
+
+.fragment-04 > section > section > section {
+  width: 80%;
+  border: black solid 2px;
+  border-radius: 12px;
+  height: 250px;
+  overflow-x: scroll;
+}
+.fragment-04 > section > section > section section {
+  width: 120%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(220, 234, 231, 0.7);
+}
+.fragment-04 > section > section > section figure {
+  border-radius: 12px;
+  position: relative;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 0;
+  height: 95%;
+  min-width: 300px;
+  cursor: pointer;
+  border: #c40095 solid 4px;
+}
+.fragment-04 > section > section > section figure i {
+  display: none;
+}
+.fragment-04 > section > section > section figure img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.fragment-04 > section > section > section figure figcaption {
+  align-self: center;
+  padding-top: 25%;
+  color: white;
+  width: 100%;
+  z-index: 10;
+  text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+}
+.fragment-04 > section > section > section figure > div {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 30px;
+  border-radius: 5px;
+  height: 30px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fragment-04 > section > section > section figure > div span {
+  width: 20px;
+  cursor: pointer;
+  height: 20px;
+  background: rgba(52, 9, 222, 0.25);
+}
+
+/*Fragment 05*/
+.fragment-05 {
+  width: 100%;
+  z-index: 1;
+}
+.fragment-05 section {
+  width: 100%;
+}
+
+.fragment-05 > section > section {
+  display: flex;
+  justify-content: center;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.fragment-05 > section > section ::-webkit-scrollbar {
+  width: 4px !important;
+}
+.fragment-05 > section > section ::-webkit-scrollbar-track {
+  background: #eeeeee !important;
+}
+.fragment-05 > section > section ::-webkit-scrollbar-thumb {
+  background: #060a1f !important;
+}
+.fragment-05 > section > section ::-webkit-scrollbar-thumb:hover {
+  background: #131a6e !important;
+}
+
+.fragment-05 > section > section > section {
+  width: 80%;
+  border: black solid 2px;
+  height: 250px;
+  overflow-x: scroll;
+  border-radius: 12px;
+}
+.fragment-05 > section > section > section section {
+  width: 120%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(220, 234, 231, 0.7);
+}
+.fragment-05 > section > section > section figure {
+  border-radius: 12px;
+  position: relative;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 0;
+  height: 95%;
+  min-width: 300px;
+  cursor: pointer;
+  border: blueviolet solid 4px;
+}
+.fragment-05 > section > section > section figure i {
+  display: none;
+}
+.fragment-05 > section > section > section figure img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.fragment-05 > section > section > section figure figcaption {
+  align-self: center;
+  padding-top: 25%;
+  color: white;
+  width: 100%;
+  z-index: 10;
+  text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+}
+.fragment-05 > section > section > section figure > div {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fragment-05 > section > section > section figure > div span {
+  width: 20px;
+  cursor: pointer;
+  height: 20px;
+  background: rgba(52, 9, 222, 0.25);
+}
+
+/*# sourceMappingURL=dashboard.css.map */
